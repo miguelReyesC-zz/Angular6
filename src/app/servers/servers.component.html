@@ -20,7 +20,11 @@
 <label>What is your name:</label>
 <input type="text" class="form-control" [(ngModel)]="yourName">
 <button class="btn btn-primary" (click)="updateName()">Update</button>
-<p *ngIf="displayYourName">Your name is: {{yourName}}</p>
+<p *ngIf="displayYourName; else noName">Your name is: {{yourName}}</p>
+
+<ng-template #noName>
+    <p>No name!!</p>
+</ng-template>
 
 <app-server></app-server>
 <app-server></app-server>
