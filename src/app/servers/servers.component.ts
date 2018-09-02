@@ -14,10 +14,12 @@ export class ServersComponent implements OnInit {
   serverName = "Initial name";
   serverName2 = "Initial name";
   newExample = "...";
+  youName = "";
+  displayYourName = false;
 
   constructor() {
     setTimeout(() => {
-       this.allowNewServer = true;
+       this.allowNewServer = false;
     }, 2000);
   }
 
@@ -34,6 +36,10 @@ export class ServersComponent implements OnInit {
 
   displayServerName() {
     this.newExample = "Server was created! Name:" + this.serverName2;
+  }
+
+  updateName() {
+    this.displayYourName = true;
   }
 
 }

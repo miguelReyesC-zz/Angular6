@@ -16,5 +16,11 @@
 <p>{{ newExample }}</p>
 
 
+<br>
+<label>What is your name:</label>
+<input type="text" class="form-control" [(ngModel)]="yourName">
+<button class="btn btn-primary" (click)="updateName()">Update</button>
+<p *ngIf="displayYourName">Your name is: {{yourName}}</p>
+
 <app-server></app-server>
 <app-server></app-server>
