@@ -16,6 +16,7 @@ export class ServersComponent implements OnInit {
   newExample = "...";
   youName = "";
   displayYourName = false;
+  names = ['Alex', 'Churrito'];
 
   constructor() {
     setTimeout(() => {
@@ -39,6 +40,7 @@ export class ServersComponent implements OnInit {
   }
 
   updateName() {
+    this.names.push(this.youName);
     this.displayYourName = true;
   }
 
